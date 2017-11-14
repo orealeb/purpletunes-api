@@ -9,19 +9,20 @@
 // var Promise = require('bluebird');
 
 module.exports = {
-    
-    /**
-   * `CatalogFeedbackController.create()`
-   */
+
+  /**
+ * `CatalogFeedbackController.create()`
+ */
   create: function createFn(req, res) {
-    var playlistSubmissionBody = req.body.playlistSubmission;
+    var playlistSubmissionBody = req.body.submission;
+    sails.log.info(req.body.submission);
     var playlistSubmission = {
-      name: playlistSubmissionBody.details,
+      name: playlistSubmissionBody.name,
       email: playlistSubmissionBody.email,
       url: playlistSubmissionBody.url,
       playlists: playlistSubmissionBody.playlists,
     };
-    sails.log.info(req.body.playlistSubmission);
+    // sails.log.info(req.body.playlistSubmission);
 
 
     PlaylistSubmission

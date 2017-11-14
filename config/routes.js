@@ -39,7 +39,15 @@ module.exports.routes = {
   'post /v1/article': 'ArticleController.create',
   'get /v1/article': 'ArticleController.find',
 
-  'post /v1/playlistFormSubmission': 'PlaylistSubmissionController.create'
+  'post /v1/playlistFormSubmission': 'PlaylistSubmissionController.create',
+
+//   '/v1/playlistFormSubmission': {
+//   target: 'PlaylistSubmissionController.create',
+//   cors: {
+//     origin: '*',
+//     methods: 'POST'
+//   }
+// }
 
   /***************************************************************************
   *                                                                          *
