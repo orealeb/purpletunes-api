@@ -37,8 +37,9 @@ module.exports.routes = {
   },
 
   'post /v1/article': 'ArticleController.create',
-  'get /v1/article': 'ArticleController.find'
+  'get /v1/article': 'ArticleController.find',
 
+  'post /v1/playlistFormSubmission': 'PlaylistSubmissionController.create'
 
   /***************************************************************************
   *                                                                          *
