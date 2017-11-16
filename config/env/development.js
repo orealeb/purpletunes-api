@@ -18,8 +18,8 @@ module.exports = {
    ***************************************************************************/
 
   // models: {
-  //   connection: 'someMongodbServer'
-  // }
+  //   connection: 'herokuMongodb'
+  // },
 
     hookTimeout: 40000
 

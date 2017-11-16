@@ -15,14 +15,18 @@ module.exports = {
  */
   create: function createFn(req, res) {
     var playlistSubmissionBody = req.body.submission;
-    sails.log.info(req.body.submission);
+    // sails.log.info(req.body.submission);
     var playlistSubmission = {
       name: playlistSubmissionBody.name,
       email: playlistSubmissionBody.email,
       url: playlistSubmissionBody.url,
-      playlists: playlistSubmissionBody.playlists,
+      playlists: [] // playlistSubmissionBody.playlists,
     };
-    // sails.log.info(req.body.playlistSubmission);
+    playlistSubmissionBody.playlists.forEach(function(item) {
+      playlistSubmission.playlists.push(item.name)
+    });
+
+     sails.log.info(playlistSubmission);
 
 
     PlaylistSubmission
